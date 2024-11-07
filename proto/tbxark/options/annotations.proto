@@ -4,7 +4,7 @@ package tbxark.options;
 
 import "google/protobuf/descriptor.proto";
 
-option go_package = "buf.build/gen/go/tbxark/options/protocolbuffers/go/tbxark/options";
+option go_package = "github.com/tbxark/options-proto/go/tbxark/options";
 option java_multiple_files = true;
 option java_outer_classname = "AnnotationsProto";
 option java_package = "com.tbxark.options";
