@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tbxark.options;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "buf.build/gen/go/tbxark/options/protocolbuffers/go/tbxark/options";
+option java_multiple_files = true;
+option java_outer_classname = "AnnotationsProto";
+option java_package = "com.tbxark.options";
+option objc_class_prefix = "TBX_API";
+
+message KeyValuePair {
+  string key = 1;
+  oneof value {
+    bool flag = 2;
+    string text = 3;
+    int64 number = 4;
+  }
+  map<string, string> extra = 5;
+}
+extend google.protobuf.MethodOptions {
+    repeated KeyValuePair options = 114514;
+}
